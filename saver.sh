@@ -12,8 +12,9 @@ do
   PACKAGE_VER=${PACK[1]}
   echo "docker save $DOCKER_REG_URI/$PACKAGE_NAME:$PACKAGE_VER | gzip -c >  $PACKAGE_NAME.$PACKAGE_VER.tar.gz"
   docker save $DOCKER_REG_URI/$PACKAGE_NAME:$PACKAGE_VER | gzip -c > $PACKAGE_NAME.$PACKAGE_VER.tar.gz
-  #remove empty file/extreme small file
-  echo "find . -type f -size -3 -delete"
-  find . -type f -size -3 -delete
 done
+#remove empty file/extreme small file
+pwd
+echo "find $DIR_PRE$DT -type f -size -3 -delete"
+find . -type f -size -3 -delete
 echo "done"
