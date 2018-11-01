@@ -1,0 +1,4 @@
+#ignore all dir-prefix equals WRAPPER
+/WRAPPER*.zip
+/WRAPPER*/
+/wrapper.cfg
